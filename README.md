@@ -25,7 +25,7 @@ docker-compose -f docker-compose.yml -f docker-compose.local.yml up
 Open the terminal. Run the script 'local-build.sh'.
 
 ```cli
-./<fileName>.
+./<fileName>
 ```
 
 Open `http://localhost/wp-admin/` in browser,use username `admin` and password `admin` to login.
