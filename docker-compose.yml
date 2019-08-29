@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: ./docker/apache-php-fpm/Dockerfile
+    image: example/apache-php-fpm:v1
+    container_name: wordpress
+    volumes:
+      # Local Settings - START
+      # For running docker images
+      # - document-root:/var/www/html
+      # For local development
+      - ./src:/var/www/html
+      # Local Settings - END
+    ports:
+      - 80:80
+    networks:
+      - default
+
+networks:
+  default:
+
+volumes:
+  document-root:
